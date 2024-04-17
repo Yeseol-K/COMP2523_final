@@ -56,6 +56,8 @@ export default class Map {
         if (!person.isVaccinated && person.age >= currentIntake) {
           const closestClinic = this.findClosestClinic(household.blockNum);
           household.vaccinatePerson(person.phn, closestClinic);
+          console.log(`"${person.fullName}" need to register for shot.`);
+          console.log(`The nearest clinic is "${closestClinic.name}".`);
         }
       });
     });

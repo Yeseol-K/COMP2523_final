@@ -9,7 +9,7 @@ export default class SimpleReport implements IReport {
   }
 
   printDetails = () => {
-    // console.log("simple report:", this.clinics);
+    console.log("simple report:");
     this.clinics.forEach((clinic) => {
       console.log(`${clinic.name} : ${clinic.queue.size()} people in line`);
     });

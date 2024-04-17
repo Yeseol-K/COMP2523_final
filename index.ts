@@ -10,15 +10,16 @@ async function main() {
   map.printMap();
   console.log("---End of Map---");
 
-  map.registerForShots(18); // age currentIntake
-  map.printMap();
-  console.log("---End of Map---");
-
   const simpleReport = new ReportMaker(new SimpleReport(map.getClinics()));
   simpleReport.printDetails();
   const complexReport = new ReportMaker(new ComplexReport(map.getClinics()));
   complexReport.printDetails();
   console.log("---End of Report---");
+
+  map.registerForShots(18); // age currentIntake
+  console.log("-------------------");
+  map.printMap();
+  console.log("---End of Map---");
 }
 
 main();
